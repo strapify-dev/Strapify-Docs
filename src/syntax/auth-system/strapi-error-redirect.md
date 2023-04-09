@@ -1,0 +1,1 @@
+# strapi-error-redirect

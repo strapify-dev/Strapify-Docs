@@ -1,0 +1,1 @@
+# strapi-page-control

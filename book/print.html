@@ -1,0 +1,649 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Strapify Docs</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Overview</li><li class="chapter-item expanded "><a href="what-is-strapify.html"><strong aria-hidden="true">1.</strong> What is Strapify? ✅</a></li><li class="chapter-item expanded "><a href="quick-install.html"><strong aria-hidden="true">2.</strong> Quick Install ✅</a></li><li class="chapter-item expanded "><a href="getting-started.html"><strong aria-hidden="true">3.</strong> Getting Started</a></li><li class="chapter-item expanded affix "><li class="part-title">Syntax Reference</li><li class="chapter-item expanded "><a href="syntax/syntax-notes.html"><strong aria-hidden="true">4.</strong> Syntax Notes</a></li><li class="chapter-item expanded "><a href="syntax/field-elements/index.html"><strong aria-hidden="true">5.</strong> Field Elements</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="syntax/field-elements/strapi-field.html"><strong aria-hidden="true">5.1.</strong> strapi-field</a></li><li class="chapter-item expanded "><a href="syntax/field-elements/strapi-into.html"><strong aria-hidden="true">5.2.</strong> strapi-into</a></li><li class="chapter-item expanded "><a href="syntax/field-elements/strapi-background-image.html"><strong aria-hidden="true">5.3.</strong> strapi-background-image</a></li></ol></li><li class="chapter-item expanded "><a href="syntax/template-elements/index.html"><strong aria-hidden="true">6.</strong> Template Elements</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="syntax/template-elements/strapi-template.html"><strong aria-hidden="true">6.1.</strong> strapi-template</a></li><li class="chapter-item expanded "><a href="syntax/template-elements/strapi-template-conditional.html"><strong aria-hidden="true">6.2.</strong> strapi-template-conditional</a></li></ol></li><li class="chapter-item expanded "><a href="syntax/collection-elements/index.html"><strong aria-hidden="true">7.</strong> Collection Elements</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="syntax/collection-elements/strapi-collection.html"><strong aria-hidden="true">7.1.</strong> strapi-collection</a></li></ol></li><li class="chapter-item expanded "><a href="syntax/filtering-sorting-pagination/index.html"><strong aria-hidden="true">8.</strong> Filtering, Sorting, and Pagination</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="syntax/filtering-sorting-pagination/strapi-sort.html"><strong aria-hidden="true">8.1.</strong> strapi-sort</a></li><li class="chapter-item expanded "><a href="syntax/filtering-sorting-pagination/strapi-sort-control.html"><strong aria-hidden="true">8.2.</strong> strapi-sort-control</a></li><li class="chapter-item expanded "><a href="syntax/filtering-sorting-pagination/strapi-filter.html"><strong aria-hidden="true">8.3.</strong> strapi-filter</a></li><li class="chapter-item expanded "><a href="syntax/filtering-sorting-pagination/strapi-filter-control.html"><strong aria-hidden="true">8.4.</strong> strapi-filter-control</a></li><li class="chapter-item expanded "><a href="syntax/filtering-sorting-pagination/strapi-page.html"><strong aria-hidden="true">8.5.</strong> strapi-page</a></li><li class="chapter-item expanded "><a href="syntax/filtering-sorting-pagination/strapi-page-size.html"><strong aria-hidden="true">8.6.</strong> strapi-page-size</a></li><li class="chapter-item expanded "><a href="syntax/filtering-sorting-pagination/strapi-page-control.html"><strong aria-hidden="true">8.7.</strong> strapi-page-control</a></li><li class="chapter-item expanded "><a href="syntax/filtering-sorting-pagination/strapi-control-value.html"><strong aria-hidden="true">8.8.</strong> strapi-control-value</a></li></ol></li><li class="chapter-item expanded "><a href="syntax/relations-and-repeatables/index.html"><strong aria-hidden="true">9.</strong> Relation & Repeatable Elements</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="syntax/relations-and-repeatables/strapi-relation.html"><strong aria-hidden="true">9.1.</strong> strapi-relation</a></li><li class="chapter-item expanded "><a href="syntax/relations-and-repeatables/strapi-repeatable.html"><strong aria-hidden="true">9.2.</strong> strapi-repeatable</a></li></ol></li><li class="chapter-item expanded "><a href="syntax/css-modifiers/index.html"><strong aria-hidden="true">10.</strong> CSS Modifiers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="syntax/css-modifiers/strapi-class-add.html"><strong aria-hidden="true">10.1.</strong> strapi-class-add</a></li><li class="chapter-item expanded "><a href="syntax/css-modifiers/strapi-class-replace.html"><strong aria-hidden="true">10.2.</strong> strapi-class-replace</a></li><li class="chapter-item expanded "><a href="syntax/css-modifiers/strapi-class-conditional.html"><strong aria-hidden="true">10.3.</strong> strapi-class-conditional</a></li></ol></li><li class="chapter-item expanded "><a href="syntax/auth-system/index.html"><strong aria-hidden="true">11.</strong> Auth System</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="syntax/auth-system/strapi-auth.html"><strong aria-hidden="true">11.1.</strong> strapi-auth</a></li><li class="chapter-item expanded "><a href="syntax/auth-system/strapi-auth-input.html"><strong aria-hidden="true">11.2.</strong> strapi-auth-input</a></li><li class="chapter-item expanded "><a href="syntax/auth-system/strapi-auth-submit.html"><strong aria-hidden="true">11.3.</strong> strapi-auth-submit</a></li><li class="chapter-item expanded "><a href="syntax/auth-system/strapi-logout.html"><strong aria-hidden="true">11.4.</strong> strapi-logout</a></li><li class="chapter-item expanded "><a href="syntax/auth-system/strapi-logout-redirect.html"><strong aria-hidden="true">11.5.</strong> strapi-logout-redirect</a></li><li class="chapter-item expanded "><a href="syntax/auth-system/strapi-error-redirect.html"><strong aria-hidden="true">11.6.</strong> strapi-error-redirect</a></li><li class="chapter-item expanded "><a href="syntax/auth-system/strapi-success-redirect.html"><strong aria-hidden="true">11.7.</strong> strapi-success-redirect</a></li></ol></li><li class="chapter-item expanded "><a href="syntax/ezforms/index.html"><strong aria-hidden="true">12.</strong> EZForms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="syntax/ezforms/strapi-ezforms-form.html"><strong aria-hidden="true">12.1.</strong> strapi-ezforms-form</a></li><li class="chapter-item expanded "><a href="syntax/ezforms/strapi-ezforms-submit.html"><strong aria-hidden="true">12.2.</strong> strapi-ezforms-submit</a></li><li class="chapter-item expanded "><a href="syntax/ezforms/strapi-error-redirect.html"><strong aria-hidden="true">12.3.</strong> strapi-error-redirect</a></li><li class="chapter-item expanded "><a href="syntax/ezforms/strapi-success-redirect.html"><strong aria-hidden="true">12.4.</strong> strapi-success-redirect</a></li></ol></li><li class="chapter-item expanded "><a href="syntax/state-elements/index.html"><strong aria-hidden="true">13.</strong> State Elements (Error, Loading, Success)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="syntax/state-elements/strapi-state-element.html"><strong aria-hidden="true">13.1.</strong> strapi-state-element</a></li><li class="chapter-item expanded "><a href="syntax/state-elements/strapi-hide-on-fail.html"><strong aria-hidden="true">13.2.</strong> strapi-hide-on-fail</a></li></ol></li><li class="chapter-item expanded "><a href="syntax/single-type-elements/basics.html"><strong aria-hidden="true">14.</strong> Single Type Elements</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="syntax/single-type-elements/strapi-single-type.html"><strong aria-hidden="true">14.1.</strong> strapi-single-type</a></li><li class="chapter-item expanded "><a href="syntax/single-type-elements/strapi-single-type-into.html"><strong aria-hidden="true">14.2.</strong> strapi-single-type-into</a></li><li class="chapter-item expanded "><a href="syntax/single-type-elements/strapi-single-type-background-image.html"><strong aria-hidden="true">14.3.</strong> strapi-single-type-background-image</a></li><li class="chapter-item expanded "><a href="syntax/single-type-elements/strapi-single-type-class-add.html"><strong aria-hidden="true">14.4.</strong> strapi-single-type-class-add</a></li><li class="chapter-item expanded "><a href="syntax/single-type-elements/strapi-single-type-class-replace.html"><strong aria-hidden="true">14.5.</strong> strapi-single-type-class-replace</a></li><li class="chapter-item expanded "><a href="syntax/single-type-elements/strapi-single-type-class-conditional.html"><strong aria-hidden="true">14.6.</strong> strapi-single-type-class-conditional</a></li><li class="chapter-item expanded "><a href="syntax/single-type-elements/strapi-single-type-repeatable.html"><strong aria-hidden="true">14.7.</strong> strapi-single-type-repeatable</a></li><li class="chapter-item expanded "><a href="syntax/single-type-elements/strapi-single-type-relation.html"><strong aria-hidden="true">14.8.</strong> strapi-single-type-relation</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Custom Scripts & Events</li><li class="chapter-item expanded "><a href="custom-events/using-custom-scripts-with-strapify.html"><strong aria-hidden="true">15.</strong> Using Custom Scripts with Strapify</a></li><li class="chapter-item expanded "><a href="custom-events/attribute-mutations.html"><strong aria-hidden="true">16.</strong> Attribute Mutations</a></li><li class="chapter-item expanded "><a href="custom-events/events.html"><strong aria-hidden="true">17.</strong> Events</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="custom-events/strapify-initialized.html"><strong aria-hidden="true">17.1.</strong> strapifyInitialized</a></li><li class="chapter-item expanded "><a href="custom-events/strapi-collection-change.html"><strong aria-hidden="true">17.2.</strong> strapiCollectionChange</a></li><li class="chapter-item expanded "><a href="custom-events/strapi-auth-registered.html"><strong aria-hidden="true">17.3.</strong> strapiAuthRegistered</a></li><li class="chapter-item expanded "><a href="custom-events/strapi-auth-register-error.html"><strong aria-hidden="true">17.4.</strong> strapiAuthRegisterError</a></li><li class="chapter-item expanded "><a href="custom-events/strapi-auth-loggedin.html"><strong aria-hidden="true">17.5.</strong> strapiAuthLoggedIn</a></li><li class="chapter-item expanded "><a href="custom-events/strapi-auth-login-error.html"><strong aria-hidden="true">17.6.</strong> strapiAuthLoginError</a></li><li class="chapter-item expanded "><a href="custom-events/strapi-user-authenticated.html"><strong aria-hidden="true">17.7.</strong> strapiUserAuthenticated</a></li><li class="chapter-item expanded "><a href="custom-events/strapi-user-authentication-error.html"><strong aria-hidden="true">17.8.</strong> strapiUserAuthenticationError</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Notes</li><li class="chapter-item expanded "><a href="notes/supported-strapi-field-types.html"><strong aria-hidden="true">18.</strong> Supported Strapi Field Types</a></li><li class="chapter-item expanded "><a href="notes/supported-plugins.html"><strong aria-hidden="true">19.</strong> Supported Plugins</a></li><li class="chapter-item expanded "><a href="notes/reserved-keywords.html"><strong aria-hidden="true">20.</strong> Reserved Keywords</a></li><li class="chapter-item expanded "><a href="notes/element-types-diagram.html"><strong aria-hidden="true">21.</strong> Element Types Diagram</a></li><li class="chapter-item expanded "><a href="changelog.html"><strong aria-hidden="true">22.</strong> Changelog</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">23.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="license.html"><strong aria-hidden="true">24.</strong> License</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Strapify Docs</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="what-is-strapify"><a class="header" href="#what-is-strapify">What is Strapify?</a></h1>
+<p>Strapify is a script that implements common functionality for the population of websites with Strapi CMS data, abstracting it all away into simple to use HTML data attributes. </p>
+<p>Straight out of the box, Strapify provides the following functionality:</p>
+<ol>
+<li><strong>Dynamic content</strong> - Strapify will automatically populate your website with content from your Strapi CMS.</li>
+<li><strong>Sorting, Filtering, and Pagination</strong> - Strapify will automatically sort, filter, and paginate your content based on the attributes you specify.  Control attributes enable static buttons to be used to sort, filter, and paginate your content.</li>
+<li><strong>Images and Videos</strong> - Strapify makes it easy to render images and videos from your Strapi CMS.</li>
+<li><strong>Rich Text Rendering</strong> - Strapify makes it easy to render rich text content from your Strapi CMS.</li>
+<li><strong>Form Submissions</strong> - Strapify integrates with the Strapi EZForms plugin, allowing you to easily submit forms to your Strapi CMS.</li>
+<li><strong>Authentication</strong> - Basic authentication is supported out of the box, allowing you to restrict access to your content based on user roles.</li>
+<li><strong>JavaScript Hooks</strong> - Strapify emits a number of JavaScript events that allow you to easily extend its functionality.  Strapify attributes can be modified at runtime to dynamically change the content that is rendered.</li>
+<li><strong>CSS Modifiers</strong> - Strapify provides a number of CSS modifiers that allow you to easily style your collection's entries depending on it's content.</li>
+</ol>
+<p>The goal of the Strapify project is to enable the integration of a free open source CMS (Strapi) into an otherwise static website, without requiring additional code or otherwise complicating the development process. To this end, we seek compatibility and convenience for both manually built sites and those built with no-code website builders.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="quick-install"><a class="header" href="#quick-install">Quick Install</a></h1>
+<p>⬇️ <a href="https://strapify-script.s3.amazonaws.com/strapify.js">Download</a></p>
+<p>📂 <a href="https://github.com/agoodman1999/strapify">Source Code</a></p>
+<h3 id="quick-install-cdn"><a class="header" href="#quick-install-cdn">Quick Install (CDN)</a></h3>
+<pre><code class="language-html">&lt;script
+	src=&quot;https://strapify-script.s3.amazonaws.com/strapify-v0.0.3.js&quot;
+	data-strapi-api-url=&quot;ENTER YOUR STRAPI URL HERE&quot;
+	type=&quot;text/javascript&quot;
+&gt;&lt;/script&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="syntax-notes-refactor-to-multiple-sections"><a class="header" href="#syntax-notes-refactor-to-multiple-sections">Syntax Notes (Refactor to multiple sections)</a></h1>
+<h3 id="arguments"><a class="header" href="#arguments">Arguments</a></h3>
+<p>An argument is the value you give to a strapi attribute when it is created. For example, in the following line,</p>
+<p><code>strapi-collection=&quot;cards&quot;</code></p>
+<p><strong><em>cards</em></strong> is said to be the argument.</p>
+<p>In the next line,</p>
+<p><code>strapi-into=&quot;alt_text -&gt; alt&quot;</code></p>
+<p><strong><em>alt_text → alt</em></strong> is said to be the argument*.*</p>
+<p>There are a few important rules (conforming to the Strapi rest API) that should be remembered when referring to Strapi collection names and field names.:</p>
+<ul>
+<li>Collections are always described by their plural name: (<strong><em>cards</em></strong> is valid while <strong><em>card</em></strong> is not)</li>
+<li>If a collection name contains underscores, those underscores should be replaced with dashes when referring to the collection: (<strong><em>some-collection</em></strong> is valid while <strong><em>some_collection</em></strong> is not)</li>
+<li>Collection names are not case sensitive: (<strong><em>cards</em></strong> is equivalent to <strong><em>Cards)</em></strong></li>
+<li>Field names are case sensitive: (<strong><em>name</em></strong> is NOT equivalent to <strong><em>Name</em></strong>)</li>
+<li>Field names should not have underscores replaced with dashes: (<strong><em>field_name</em></strong> is valid while <strong><em>field-name</em></strong> is not)</li>
+</ul>
+<h3 id="multiple-arguments"><a class="header" href="#multiple-arguments">Multiple Arguments</a></h3>
+<p>Some attributes such as <code>strapi-class-add</code>, can accept multiple arguments as a value. These arguments are given as | (vertical bar/pipe) separated values. When multiple arguments are given in an attribute value, Strapify will function as if two attributes of the same name but different values were given. For example,</p>
+<pre><code>`strapi-class-add=&quot;layout-class | color-class&quot;`
+</code></pre>
+<p>will cause both the class names given in the Strapi fields layout-class and color-class to be added to class list of the element containing the attribute. It is not valid to define two attributes of the same name on an element, so the | syntax must be used.</p>
+<h3 id="components-in-arguments"><a class="header" href="#components-in-arguments">Components in Arguments</a></h3>
+<p>To reference a Strapi field contained in a component, you write the field name of the component and then the name of the field in the component, separated by a <strong>.</strong> (period). For example,</p>
+<p><code>strapi-field=&quot;name.first&quot;</code></p>
+<p>would refer to the field with field name <em>first</em> within the component with field name <em>name.</em></p>
+<p>This also works with nested components like so</p>
+<p><code>strapi-field=&quot;employee.name.first&quot;</code></p>
+<p>which refers to a field called <em>first</em> which exists within a component <em>name</em> which exists within a component <em>employee</em>.</p>
+<h3 id="variable-templating-in-arguments"><a class="header" href="#variable-templating-in-arguments">Variable Templating in Arguments</a></h3>
+<p>Some attributes (see below) accept a template as an argument; a string which may contain references to Strapi fields. Strapi fields are referenced by giving the field name wrapped in double curly braces <code>{{}}</code>.</p>
+<p>For example,</p>
+<p><code>background: {{background_color}};</code> would be transformed into <code>background: red;</code>.</p>
+<p>An attribute using the above template would look like this,</p>
+<p><code>strapi-css-rule=&quot;background: {{background_color}};&quot;</code>.</p>
+<p>This attribute would create an inline CSS rule for the element, with a substitution of the value held in the Strapi field background_color in place of <code>{{background_color}}</code>.</p>
+<p>Attributes that accept variable template arguments:</p>
+<p><code>strapi-into</code>, <code>strapi-css-rule</code>, <code>strapi-single-type-into</code>, <code>strapi-single-type-css-rule</code></p>
+<h3 id="query-string-variables-in-arguments"><a class="header" href="#query-string-variables-in-arguments">Query String Variables in Arguments</a></h3>
+<p>Query string arguments are arguments that contain a placeholder for a value contained in the current page’s query string, notated by a <strong><em>qs.</em></strong> prefix, example: <strong><em>qs.varName</em></strong>. When strapify finds an occurrence of a query string argument, it will be replaced entirely by the value of the query string parameter with the specified name. For example <strong><em>qs.varName</em></strong> would be replaced by <strong><em>varValue</em></strong> if the query string for the page was <strong><em>?varName=varValue</em></strong>. A few more examples are shown in the table below. Query string variables may be used in any Strapify attribute value.</p>
+<div class="table-wrapper"><table><thead><tr><th>Website Query String</th><th>Given Attribute Value</th><th>Strapify Uses</th></tr></thead><tbody>
+<tr><td>?message=hello</td><td>qs.message</td><td>hello</td></tr>
+<tr><td>?nameComponentField=first</td><td>name.qs.nameComponentField</td><td>name.first</td></tr>
+<tr><td>?title=movie review</td><td>[title][$eq]=qs.title</td><td>[title][$eq]=movie review</td></tr>
+</tbody></table>
+</div>
+<p>There may be situations where you wish to render a single entry in a Strapi collection on a dedicated page. For example, if you had a collection Blogs, you may wish to have a separate page for each Blog belonging to Blogs. Strapify allows this situations through query string arguments, which you would write in the URL when you link to the page for the blog. Consider the following Strapi collection.</p>
+<blockquote>
+<p>collection name: Blog</p>
+<ul>
+<li>field name: title</li>
+<li>field name: rich_text</li>
+</ul>
+</blockquote>
+<p>Now let’s say you want to have a page for a blog in the collection with title “fun day at the beach.” and another page for a blog with title “bad day at home.”. To do this create a page called www.yourwebsite.com/blog and on that page, create a collection element as you would normally. Now to link to that URL in a way that will allow you display only the “fun day at the beach blog”, you would use the URL www.yourwebsite.com/blog?title=fun day at the beach. On your blog page, the query string parameter will be available in your strapi arguments, which you can use to filter out a single blog to display. You would use the following attributes on the collection element your created:</p>
+<p><code>strapi-collection=&quot;blogs&quot;</code> , <code>strapi-filter=&quot;[title][$eq]=qs.title&quot;</code></p>
+<p>If you wanted to instead link to the blog with title “bad day at home”, you would use the URL www.yourwebsite.com/blog?title=bad day at home.</p>
+<h3 id="strapi-request-query-strings"><a class="header" href="#strapi-request-query-strings">Strapi Request Query Strings</a></h3>
+<p>Some attributes, such as <code>strapi-filter</code> and <code>strapi-sort</code> accept arguments arguments conforming to <a href="https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/rest/api-parameters.html">Strapi query string API parameters</a>. The syntax for these attributes is identical to the Strapi query string API, except the identifier for the query string parameter is omitted. For example, consider the query string parameter <code>sort=age</code> , which might appear in a Strapi request like <em>localhost:1337/api/people?sort=age</em>. To achieve this in strapify you would give the attribute <code>strapi-sort</code> the argument <code>age</code>. Similarly for filters, the query string parameter <code>filters[name][$eq]=Paul Dirac</code> would become <code>[name][$eq]=Paul Dirac</code> when used with a the <code>strapi-filter</code> attribute.</p>
+<p>When making a Strapi request, it is possible to include multiple of the same query string parameter. For example, you might have a request like localhost:1337/api/people?sort=name&amp;sort=age:desc which would would sort the collection people by name and then by age descending. This is accomplished in Strapify by providing multiple arguments to the <code>strapi-sort</code> attribute with the value <code>name | age:desc</code> . Filters work similarly, if you had the request url localhost:1337/api/people?filters[$and][0][name][$eq]=Paul Dirac&amp;filters[$and][1][age][$eq]=82, you would give <code>strapi-filter</code> the value <code>[$and][0][name][$eq]=Paul Dirac | [$and][1][age][$eq]=82</code> .</p>
+<p>There is one important difference between the Strapi query string API syntax and the Strapify syntax: equality operators must always be prefixed with <code>[$eq]</code> in Strapify arguments. For example, <code>[name][$eq]=Paul Dirac</code> is valid while <code>[name]=Paul Dirac</code> is not. This is due to the fact that while Strapi will allow the <code>[$eq]</code> part to be omitted when all other occurrences of the equality operator also omit it, Strapify uses the full <code>[$eq]=</code> syntax internally. If Strapify receives arguments using <code>=</code> instead of <code>[$eq]=</code> , invalid requests will be made and your Strapi data will not be fetched.</p>
+<h3 id="strapify-conditional-expression-arguments"><a class="header" href="#strapify-conditional-expression-arguments">Strapify Conditional Expression Arguments</a></h3>
+<p>There are Strapify attributes that require a conditional expression to be given as an argument, namely <code>strapi-template-conditional</code> and <code>strapi-class-conditional</code> . The conditional expressions are written using a syntax specific to Strapify. The syntax is similar to popular programming languages such as C, Java, Javascript and Python, though much more primitive. A Strapify conditional expression may contain operands, operators and groups. Operands are values which are to be compared to one another, using a comparison operator. Operators, such as <code>==</code> and <code>&amp;&amp;</code>, define how two operands or sub-expression groups are to be compared or logically composed. Groups are sub-expressions contained within round bracket parentheses, used to impose an order of logical operations. Strapify will take any Strapi data and query string variable data to make the specified comparisons to produce a boolean value representing whether or not the condition is met.</p>
+<p>Below are the allowed operands types with a few examples:</p>
+<ul>
+<li>integer literals: <code>1</code> <code>32</code></li>
+<li>float literals: <code>1.0</code> <code>54.43</code></li>
+<li>string literals: <code>'hello world'</code> <code>'32'</code> <code>'true'</code> <code>' '</code></li>
+<li>boolean literals: <code>true</code> <code>false</code></li>
+<li>null literals: <code>null</code> <code>undefined</code></li>
+<li>Strapi field variables: <code>age</code> <code>name.first</code> <code>is_employed</code></li>
+<li>Strapify query string variables: <code>qs.title</code> <code>qs.queryStringVarName</code></li>
+</ul>
+<p>Below are the allowed operators with some examples:</p>
+<ul>
+<li>equality: <code>age == 24</code> <code>name == 'Paul Dirac'</code> <code>is_employed == false</code> <code>favorite_food == null</code> <code>name.first == name.last</code> <code>title == qs.title</code></li>
+<li>not equal to: <code>age != 24</code> <code>name != 'Paul Dirac'</code> <code>is_employed != false</code> <code>score !=  3.5</code> <code>favorite_food != null</code></li>
+<li>less than: <code>age &lt; 33</code> <code>score &lt; 8</code></li>
+<li>less than or equal to: <code>age &lt;= 33</code> <code>score &lt;= 8</code></li>
+<li>greater than: <code>age &gt; 33</code> <code>score &gt; 8</code></li>
+<li>greater than or equal to: <code>age &gt;= 33</code> <code>score &gt;= 8</code></li>
+<li>and: <code>name == 'Paul Dirac' &amp;&amp; age == 82</code> <code>is_employed == true &amp;&amp; favorite_food == 'Pizza'</code></li>
+<li>or: <code>name == 'Paul Dirac' || age == 82</code> <code>is_employed == true || favorite_food == 'Pizza'</code></li>
+</ul>
+<p>Expressions must always be split into groups (with parentheses) when using more than one logical operator. The following are valid examples:</p>
+<ul>
+<li><code>name == 'Paul Dirac' &amp;&amp; age == 82</code></li>
+<li><code>(name == 'Paul Dirac' &amp;&amp; age == 82) || is_employed == false</code></li>
+<li><code>(name == 'Paul Dirac' &amp;&amp; age == 82) || (is_employed == false &amp;&amp; score == 3.0)</code></li>
+</ul>
+<h3 id="special-characters"><a class="header" href="#special-characters">Special Characters</a></h3>
+<ul>
+<li>Note that some special characters including ampersands (&amp;) should be encoded manually in your attribute values. For example if you’re trying to filter by a Category field equal to “Rice &amp; Beans”, the value would be <code>strapi-filter=[Category][$eq]=Rice %26 Beans</code> rather than <code>strapi-filter=[Category][$eq]=Rice &amp; Beans</code></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="field-elements"><a class="header" href="#field-elements">Field Elements</a></h1>
+<p><em>Field elements</em> are HTML elements that will have their content modified with data from Strapi when Strapify executes. Each of these elements correspond to a particular field in a Strapi collection. These elements are defined with the <code>strapi-field</code> attribute. How and which content of the <em>field elements</em> are modified is contextual and depends on the element tag and the strapi field type being used. Read through the attribute syntax for more details.</p>
+<p><strong>Allowed Attributes:</strong></p>
+<p><code>strapi-field</code> <code>strapi-into</code> <code>strapi-class-add</code> <code>strapi-class-replace</code> <code>strapi-class-conditional</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-field"><a class="header" href="#strapi-field">strapi-field</a></h1>
+<p>The <code>strapi-field</code> attribute specifies that the element is a <a href="syntax/field-elements/./index.html">field element</a>. Elements with strapi-field will have their content replaced with content from Strapi.  How and which content of the field elements are modified is contextual and depends on the element tag and the strapi field type being used.</p>
+<p>Below is the HTML to render a collection Person (plural people), with several different element types to render Strapi fields.</p>
+<pre><code class="language-html">&lt;div strapi-collection=&quot;people&quot;&gt;
+	&lt;div strapi-template=&quot;&quot;&gt;
+		&lt;p strapi-field=&quot;name&quot;&gt;name&lt;/p&gt;
+		&lt;p strapi-field=&quot;age&quot;&gt;age&lt;/p&gt;
+		&lt;p&gt;is employed: &lt;span strapi-field=&quot;is_employed&quot;&gt;is_employed&lt;/span&gt;&lt;/p&gt;
+		&lt;div strapi-field=&quot;bio&quot;&gt;
+			&lt;p&gt;rich text placeholder ( I get deleted ) )&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;img strapi-field=&quot;portrait&quot; /&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="table-wrapper"><table><thead><tr><th>Strapi Field Type</th><th>HTML Elements</th><th>Comments</th></tr></thead><tbody>
+<tr><td>Text</td><td><code>p</code> <code>h</code> <code>span</code> <code>div</code></td><td>The div is typically invalid but can be used as a special case to embed a video. For it to work, your text field must contain a link and the div must contain an iframe child element.</td></tr>
+<tr><td>Email</td><td><code>p</code> <code>h</code> <code>span</code></td><td>Field data will be inserted as text content.</td></tr>
+<tr><td>Rich Text</td><td><code>div</code></td><td>HTML elements will be created in the div to render the rich text.</td></tr>
+<tr><td>Number</td><td><code>p</code> <code>h</code> <code>span</code></td><td>Field data will be inserted as text content.</td></tr>
+<tr><td>Enumeration</td><td><code>p</code> <code>h</code> <code>span</code></td><td>Field data will be inserted as text content.</td></tr>
+<tr><td>Date</td><td><code>p</code> <code>h</code> <code>span</code></td><td>Field data will be inserted as text content.</td></tr>
+<tr><td>Media (Image)</td><td><code>img</code></td><td>The image source will be set to point to the Strapi url for the image.</td></tr>
+<tr><td>Media (Video)</td><td><code>div</code></td><td>A video element will be inserted into the div.</td></tr>
+<tr><td>Boolean</td><td><code>p</code> <code>h</code> <code>span</code></td><td>Field data will be inserted as text content.</td></tr>
+</tbody></table>
+</div>
+<p>For relations see <code>strapi-relation</code>, for repeatable components or multiple media type fields see <code>strapi-repeatable</code>.</p>
+<p>Field elements must be a child of a <a href="syntax/field-elements/syntax/template-elements/index.html">template element</a> or be a template element. </p>
+<p><strong>Allowed Elements:</strong></p>
+<p><code>div</code> <code>p</code> <code>h</code> <code>span</code> <code>img</code></p>
+<p><strong>Related Attributes:</strong></p>
+<p><a href="syntax/field-elements/../template-elements/strapi-template.html">strapi-template</a></p>
+<p><strong>Allows Multiple Arguments:</strong> 🚫 <strong>NO</strong></p>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-html">&lt;p&gt;Name: &lt;span strapi-field=&quot;name&quot;&gt;name&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+<p>Renders the value in the Strapi field name.</p>
+<pre><code class="language-html">&lt;img strapi-field=&quot;portrait_image&quot;&gt;
+</code></pre>
+<p>Renders the image held in the Strapi field portrait_image.</p>
+<pre><code class="language-html">&lt;p&gt;First Name: &lt;span strapi-field=&quot;name.first&quot;&gt;first name&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+<p>Renders the field first in the component field name.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-into"><a class="header" href="#strapi-into">strapi-into</a></h1>
+<p>The <code>strapi-into</code> attribute is used to pass data from a Strapi field directly into an HTML attribute. Elements with this attribute must belong to a template element.</p>
+<p>Below is the HTML to render a collection Person (plural people), with a <code>strapi-into</code> attribute to set the alt text of the <code>img</code> to the value held in the Strapi field <code>alt_text</code>.</p>
+<pre><code class="language-html">&lt;div strapi-collection=&quot;people&quot;&gt;
+	&lt;div strapi-template=&quot;&quot;&gt;
+		&lt;img strapi-field=&quot;portrait&quot; strapi-into=&quot;alt_text -&gt; alt&quot; /&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>Allowed Elements:</strong></p>
+<p>Any.</p>
+<p><strong>Related Attributes:</strong></p>
+<p><a href="syntax/field-elements/strapi-field.html">strapi-field</a></p>
+<p><strong>Allows Multiple Arguments:</strong> ✅ <strong>YES</strong></p>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-html">&lt;img strapi-into=&quot;alt_text -&gt; alt&quot;&gt;
+</code></pre>
+<p>Sets the alt attribute of the img element to the value in the strapi field alt_text.</p>
+<pre><code class="language-html">&lt;img strapi-into=&quot;image.alt_text -&gt; alt&quot;&gt;
+</code></pre>
+<p>Sets the alt attribute of the img element to the value in the field alt_text belonging to the component in the field image.</p>
+<pre><code class="language-html">&lt;img strapi-into=&quot;element_id -&gt; id | alt_text -&gt; alt&quot;&gt;
+</code></pre>
+<p>Sets the id of the img element to the value in the Strapi field element_id and sets the alt attribute of the img element to the value in the strapi field alt_text.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-background-image"><a class="header" href="#strapi-background-image">strapi-background-image</a></h1>
+<p>The <code>strapi-background-image</code> attribute is used to set a background image on another element. The value of the attribute is the name of the Strapi field that contains the image. The image must be a single image, not multiple images.</p>
+<p>The CSS background-size is set to cover by default. To override this, you'll need to use <code>!important</code> in your CSS.</p>
+<p>Below is an HTML example of the <code>strapi-background-image</code> attribute being used to set the background image of a div.</p>
+<pre><code class="language-html">&lt;div strapi-collection=&quot;countries&quot;&gt;
+	&lt;div strapi-template=&quot;&quot; strapi-background-image=&quot;countryImage&quot;&gt;
+		&lt;h1 strapi-field=&quot;countryName&quot;&gt;&lt;/h1&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>Allowed Elements:</strong></p>
+<p>Any template element or child of a template element.</p>
+<p><strong>Related Attributes:</strong></p>
+<p><a href="syntax/field-elements/strapi-field.html">strapi-field</a></p>
+<p><strong>Allows Multiple Arguments:</strong> ✅ <strong>YES</strong></p>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-html">&lt;div strapi-template strapi-background-image=&quot;portraitPhoto&quot;&gt;
+	&lt;h3 strapi-field=&quot;name&quot;&gt;&lt;/h3&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Sets the background image of the div to the value in the strapi field &quot;portraitPhoto&quot;.</p>
+<pre><code class="language-html">&lt;div strapi-template&gt;
+	&lt;div strapi-background-image=&quot;portraitPhoto&quot;&gt;&lt;/div&gt;
+	&lt;h3 strapi-field=&quot;name&quot;&gt;&lt;/h3&gt;
+&lt;/div&gt;
+
+</code></pre>
+<p>Sets the background image of the div to the value in the strapi field &quot;portraitPhoto&quot;.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="template-elements"><a class="header" href="#template-elements">Template Elements</a></h1>
+<p><em>Template elements</em> are HTML elements that will be duplicated for each entry in a Strapi collection, relation or repeatable field (components, media, etc…). </p>
+<p>These elements contain <a href="syntax/template-elements/syntax/field-elements/index.html">field elements</a>, and are descendants of <a href="syntax/template-elements/syntax/collection-elements/index.html">collection elements</a>, <a href="syntax/template-elements/syntax/relations-and-repeatables/strapi-relation.html">relation elements</a> or <a href="syntax/template-elements/syntax/relations-and-repeatables/strapi-repeatable.html">repeatable elements</a>. Template elements are defined with the <code>strapi-template</code> attribute. </p>
+<p>Multiple templates can be created and chosen dynamically based on the data in Strapi using <code>strapi-template-conditional</code></p>
+<p>Template elements also add a <code>strapi-template-id</code> attribute which can be used in cases where you need to fetch data directly from the Strapi API.</p>
+<!-- Once data has been inserted into a template, and that template has been added to the DOM, these elements will be referred to as _populated template elements_. You, as the developer, add _template elements_ to the website and Strapify will use those elements to create _populated template elements_ that the user will see at runtime. -->
+<h4 id="attributes"><a class="header" href="#attributes">Attributes</a></h4>
+<p><a href="syntax/template-elements/./strapi-template.html">strapi-template</a>, <a href="syntax/template-elements/./strapi-template-conditional.html">strapi-template-conditional</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-template"><a class="header" href="#strapi-template">strapi-template</a></h1>
+<p>The <code>strapi-template</code> attribute specifies that the element is a template element. All template elements will be removed from the DOM when Strapify runs and replaced with template elements injected with Strapi data. Template elements must exist as children of collection elements, relation elements or repeatable elements.  If multiple template elements exist as children to a collection element, relation element or repeatable element, the first occurring template element will be used. </p>
+<p>If a collection element, relation element or repeatable element contains a standard template in addition to conditional template elements, any Strapi entries that don’t meet the conditions for any of the conditional templates, will use the standard template as a fallback.</p>
+<p>Below is the HTML to specify a template element for the collection people, with two <code>p</code> elements to render the name and age fields.</p>
+<pre><code class="language-html">&lt;div strapi-collection=&quot;people&quot;&gt;
+	&lt;div strapi-template=&quot;&quot;&gt;
+		&lt;p strapi-field=&quot;name&quot;&gt;name goes here&lt;/p&gt;
+		&lt;p strapi-field=&quot;age&quot;&gt;age goes here&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>Allowed Elements:</strong></p>
+<p>Any element.</p>
+<p><strong>Related Attributes:</strong></p>
+<p><a href="syntax/template-elements/./strapi-template-conditional.html">strapi-template-conditional</a></p>
+<p><strong>Allows Multiple Arguments:</strong> 🚫 <strong>NO</strong></p>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-html">&lt;div strapi-template=&quot;&quot;&gt;
+	&lt;p strapi-field=&quot;name&quot;&gt;name goes here&lt;/p&gt;
+	&lt;p strapi-field=&quot;age&quot;&gt;age goes here&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Mark the div element as a template element for the Strapi collection named my_strapi_collection_name_plural.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-template-conditional"><a class="header" href="#strapi-template-conditional">strapi-template-conditional</a></h1>
+<p>The <code>strapi-template-conditional</code> attribute specifies that the element is a conditional template element. Conditional template elements function identically to standard template elements, but take a conditional expression argument which defines a condition that must be met by the data in a Strapi entry for this template to be used. The <a href="syntax/template-elements/Strapify%20Docs%203c7d220c5c6e4306baad33b1d2890f94.html">Strapify Conditional Expression Arguments section</a> details the conditional expression syntax. This attribute is useful in scenarios for which you want to have multiple templates so that certain entries can be rendered with a different appearance, or with different data displayed. A standard template element should always be included in the parent collection element as a fallback in the cases that the data for an entry in the collection does not pass any of the conditional expressions on the conditional template elements.</p>
+<p>Below is the HTML to specify two template elements, which have different styles (from the classes red and green). A standard template is provided as a fallback in the case that none of the conditional templates have their conditions met.</p>
+<pre><code class="language-html">&lt;div strapi-collection=&quot;people&quot;&gt;
+	&lt;div class=&quot;red&quot; strapi-template-conditional=&quot;is_employed == false&quot;&gt;
+		&lt;p strapi-field=&quot;name&quot;&gt;name goes here&lt;/p&gt;
+		&lt;p strapi-field=&quot;age&quot;&gt;age goes here&lt;/p&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;green&quot; strapi-template-conditional=&quot;is_employed == true&quot;&gt;
+		&lt;p strapi-field=&quot;name&quot;&gt;name goes here&lt;/p&gt;
+		&lt;p strapi-field=&quot;age&quot;&gt;age goes here&lt;/p&gt;
+	&lt;/div&gt;
+
+	&lt;div strapi-template=&quot;&quot;&gt;
+		&lt;p strapi-field=&quot;name&quot;&gt;name goes here&lt;/p&gt;
+		&lt;p strapi-field=&quot;age&quot;&gt;age goes here&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>Allows Multiple Arguments:</strong> 🚫 <strong>NO</strong></p>
+<p><strong>Examples</strong></p>
+<pre><code>strapi-template-conditional=&quot;name == 'Paul Dirac'&quot;
+</code></pre>
+<blockquote>
+<p>| The template element will be used in the case the the person’s name is Paul Dirac. |
+| strapi-template-conditional | age &lt; 90 | &lt;div</p>
+</blockquote>
+<pre><code>strapi-template-conditional=&quot;age &lt; 90&quot;
+</code></pre>
+<blockquote>
+<p>| The template element will be used in the case the the person is less than 90 years old. |
+| strapi-template-conditional | is_employed == false | &lt;div</p>
+</blockquote>
+<pre><code>strapi-template-conditional=&quot;is_employed == false&quot;
+</code></pre>
+<blockquote>
+<p>| The template element will be used in the case the the person is not employed. |
+| strapi-template-conditional | name == 'Paul Dirac' &amp;&amp; age == 82 | &lt;div</p>
+</blockquote>
+<pre><code>strapi-template-conditional=&quot;name == 'Paul Dirac' &amp;&amp; age == 82&quot;
+</code></pre>
+<blockquote>
+<p>| The template element will be used in the case the the person’s name is Paul Dirac and their age is 82. |
+| strapi-template-conditional | (name == 'Paul Dirac' &amp;&amp; age == 82) || is_employed == false | &lt;div</p>
+</blockquote>
+<pre><code>strapi-template-conditional=&quot;(name == 'Paul Dirac' &amp;&amp; age == 82) || is_employed == false&quot;
+</code></pre>
+<blockquote>
+<p>| The template element will be used in the case the the person’s name is Paul Dirac and their age is 82 or if they’re unemployed. |
+| strapi-template-conditional | (name == 'Paul Dirac' &amp;&amp; age == 82) || (is_employed == false &amp;&amp; score == 3.0) | &lt;div</p>
+</blockquote>
+<pre><code>strapi-template-conditional=&quot;(name == 'Paul Dirac' &amp;&amp; age == 82) || (is_employed == false &amp;&amp; score == 3.0)&quot;
+</code></pre>
+<blockquote>
+<p>| The template element will be used in the case the the person’s name is Paul Dirac and their age is 82 or if they’re unemployed and their score is 3. |</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="collection-elements"><a class="header" href="#collection-elements">Collection Elements</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-collection"><a class="header" href="#strapi-collection">strapi-collection</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="filtering-sorting-and-pagination"><a class="header" href="#filtering-sorting-and-pagination">Filtering, Sorting, and Pagination</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-sort"><a class="header" href="#strapi-sort">strapi-sort</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-sort-control"><a class="header" href="#strapi-sort-control">strapi-sort-control</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-filter"><a class="header" href="#strapi-filter">strapi-filter</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-filter-control"><a class="header" href="#strapi-filter-control">strapi-filter-control</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-page"><a class="header" href="#strapi-page">strapi-page</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-page-size"><a class="header" href="#strapi-page-size">strapi-page-size</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-page-control"><a class="header" href="#strapi-page-control">strapi-page-control</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-control-value"><a class="header" href="#strapi-control-value">strapi-control-value</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="relation--repeatable-elements"><a class="header" href="#relation--repeatable-elements">Relation &amp; Repeatable Elements</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-relation"><a class="header" href="#strapi-relation">strapi-relation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-repeatable"><a class="header" href="#strapi-repeatable">strapi-repeatable</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="css-modifiers"><a class="header" href="#css-modifiers">CSS Modifiers</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-class-add"><a class="header" href="#strapi-class-add">strapi-class-add</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-class-replace"><a class="header" href="#strapi-class-replace">strapi-class-replace</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-class-conditional"><a class="header" href="#strapi-class-conditional">strapi-class-conditional</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="auth-system"><a class="header" href="#auth-system">Auth System</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-auth"><a class="header" href="#strapi-auth">strapi-auth</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-auth-input"><a class="header" href="#strapi-auth-input">strapi-auth-input</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-auth-submit"><a class="header" href="#strapi-auth-submit">strapi-auth-submit</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-logout"><a class="header" href="#strapi-logout">strapi-logout</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-logout-redirect"><a class="header" href="#strapi-logout-redirect">strapi-logout-redirect</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-error-redirect"><a class="header" href="#strapi-error-redirect">strapi-error-redirect</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-success-redirect"><a class="header" href="#strapi-success-redirect">strapi-success-redirect</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ezforms"><a class="header" href="#ezforms">EZForms</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-ezforms-form"><a class="header" href="#strapi-ezforms-form">strapi-ezforms-form</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-ezforms-submit"><a class="header" href="#strapi-ezforms-submit">strapi-ezforms-submit</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-error-redirect-1"><a class="header" href="#strapi-error-redirect-1">strapi-error-redirect</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-success-redirect-1"><a class="header" href="#strapi-success-redirect-1">strapi-success-redirect</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="state-elements-error-loading-success"><a class="header" href="#state-elements-error-loading-success">State Elements (Error, Loading, Success)</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-state-element"><a class="header" href="#strapi-state-element">strapi-state-element</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-hide-on-fail"><a class="header" href="#strapi-hide-on-fail">strapi-hide-on-fail</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="single-type-elements"><a class="header" href="#single-type-elements">Single Type Elements</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-single-type"><a class="header" href="#strapi-single-type">strapi-single-type</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-single-type-into"><a class="header" href="#strapi-single-type-into">strapi-single-type-into</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-single-type-background-image"><a class="header" href="#strapi-single-type-background-image">strapi-single-type-background-image</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-single-type-class-add"><a class="header" href="#strapi-single-type-class-add">strapi-single-type-class-add</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-single-type-class-replace"><a class="header" href="#strapi-single-type-class-replace">strapi-single-type-class-replace</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-single-type-class-conditional"><a class="header" href="#strapi-single-type-class-conditional">strapi-single-type-class-conditional</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-single-type-repeatable"><a class="header" href="#strapi-single-type-repeatable">strapi-single-type-repeatable</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-single-type-relation"><a class="header" href="#strapi-single-type-relation">strapi-single-type-relation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="using-custom-scripts-with-strapify"><a class="header" href="#using-custom-scripts-with-strapify">Using Custom Scripts with Strapify</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="attribute-mutations"><a class="header" href="#attribute-mutations">Attribute Mutations</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="events"><a class="header" href="#events">Events</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapifyinitialized"><a class="header" href="#strapifyinitialized">strapifyInitialized</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapicollectionchange"><a class="header" href="#strapicollectionchange">strapiCollectionChange</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapiauthregistered"><a class="header" href="#strapiauthregistered">strapiAuthRegistered</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapiauthregistererror"><a class="header" href="#strapiauthregistererror">strapiAuthRegisterError</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapiauthloggedin"><a class="header" href="#strapiauthloggedin">strapiAuthLoggedIn</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapiauthloginerror"><a class="header" href="#strapiauthloginerror">strapiAuthLoginError</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapiuserauthenticated"><a class="header" href="#strapiuserauthenticated">strapiUserAuthenticated</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strapiuserauthenticationerror"><a class="header" href="#strapiuserauthenticationerror">strapiUserAuthenticationError</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="supported-strapi-field-types"><a class="header" href="#supported-strapi-field-types">Supported Strapi Field Types</a></h1>
+<h3 id="supported-strapi-field-types-1"><a class="header" href="#supported-strapi-field-types-1">Supported Strapi Field Types:</a></h3>
+<blockquote>
+<p>✅ Supported
+⚠️ Work In Progress - do not use
+🚫 Not Supported - do not use</p>
+</blockquote>
+<aside>
+Media
+<br> 
+✅ images
+✅ videos
+🚫 audio
+⚠️ files
+</aside>
+<aside>
+✅ UID
+</aside>
+<aside>
+✅ Email
+</aside>
+<aside>
+⚠️ Password
+</aside>
+<aside>
+✅ Relation
+</aside>
+<aside>
+✅ Enumeration
+</aside>
+<aside>
+🚫 JSON
+</aside>
+<aside>
+🚫 Dynamic Zone
+</aside>
+<aside>
+✅ Component
+</aside>
+<aside>
+✅ Text
+</aside>
+<aside>
+✅ Rich Text
+</aside>
+<aside>
+✅ Date
+</aside>
+<aside>
+✅ Boolean
+</aside>
+<aside>
+✅ Number
+</aside>
+<p>To request support for a strapi extension, plugin or feature, email <a href="mailto:agoodman@civiconnect.ca">agoodman@civiconnect.ca</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="supported-plugins"><a class="header" href="#supported-plugins">Supported Plugins</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="reserved-keywords"><a class="header" href="#reserved-keywords">Reserved Keywords</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="element-types-diagram"><a class="header" href="#element-types-diagram">Element Types Diagram</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contributing"><a class="header" href="#contributing">Contributing</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="license"><a class="header" href="#license">License</a></h1>
+<h1 id="the-mit-license-mit"><a class="header" href="#the-mit-license-mit">The MIT License (MIT)</a></h1>
+<p>Copyright © <code>2023</code> <code>Strapify Contributors (Austin Goodman, Ray Keating, Civiconnect)</code></p>
+<p>Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the “Software”), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:</p>
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
