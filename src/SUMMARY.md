@@ -2,18 +2,15 @@
 
 # Overview
 
-- [What is Strapify? ✅](what-is-strapify.md)
-- [Quick Install ✅](quick-install.md)
+- [What is Strapify?](what-is-strapify.md)
 - [Getting Started](getting-started.md)
+- [Quick Install](quick-install.md)
 
 # Syntax Reference
-
-- [Syntax Notes](syntax/syntax-notes.md)
 
 - [Field Elements](syntax/field-elements/index.md)
   - [strapi-field](syntax/field-elements/strapi-field.md)
   - [strapi-into](syntax/field-elements/strapi-into.md)
-  - [strapi-background-image](syntax/field-elements/strapi-background-image.md)
 - [Template Elements](syntax/template-elements/index.md)
   - [strapi-template](syntax/template-elements/strapi-template.md)
   - [strapi-template-conditional](syntax/template-elements/strapi-template-conditional.md)
@@ -35,6 +32,7 @@
   - [strapi-class-add](syntax/css-modifiers/strapi-class-add.md)
   - [strapi-class-replace](syntax/css-modifiers/strapi-class-replace.md)
   - [strapi-class-conditional](syntax/css-modifiers/strapi-class-conditional.md)
+  - [strapi-background-image](syntax/css-modifiers/strapi-background-image.md)
 - [Auth System](syntax/auth-system/index.md)
   - [strapi-auth](syntax/auth-system/strapi-auth.md)
   - [strapi-auth-input](syntax/auth-system/strapi-auth-input.md)
@@ -51,7 +49,7 @@
 - [State Elements (Error, Loading, Success)](syntax/state-elements/index.md)
   - [strapi-state-element](syntax/state-elements/strapi-state-element.md)
   - [strapi-hide-on-fail](syntax/state-elements/strapi-hide-on-fail.md)
-- [Single Type Elements](syntax/single-type-elements/basics.md)
+- [Single Type Elements](syntax/single-type-elements/index.md)
   - [strapi-single-type](syntax/single-type-elements/strapi-single-type.md)
   - [strapi-single-type-into](syntax/single-type-elements/strapi-single-type-into.md)
   - [strapi-single-type-background-image](syntax/single-type-elements/strapi-single-type-background-image.md)
@@ -76,11 +74,18 @@
   - [strapiUserAuthenticationError](custom-events/strapi-user-authentication-error.md)
 
 # Notes
-
+- [Syntax Notes](notes/syntax-notes.md)
+  - [Arguments](notes/syntax-notes/arguments.md)
+  - [Multiple Arguments](notes/syntax-notes/multiple-arguments.md)
+  - [Components in Arguments](notes/syntax-notes/components-in-arguments.md)
+  - [Variable Templating in Arguments](notes/syntax-notes/variable-templating-in-arguments.md)
+  - [Query String Variables in Arguments](notes/syntax-notes/query-string-variables-in-arguments.md)
+  - [Strapi Sort & Filter Syntax](notes/syntax-notes/strapi-sort-filter-syntax.md)
+  - [Strapify Conditional Expression Arguments](notes/syntax-notes/strapify-conditional-expression-arguments.md)
+  - [Special Characters](notes/syntax-notes/special-characters.md)
 - [Supported Strapi Field Types](notes/supported-strapi-field-types.md)
 - [Supported Plugins](notes/supported-plugins.md)
 - [Reserved Keywords](notes/reserved-keywords.md)
-- [Element Types Diagram](notes/element-types-diagram.md)
 - [Changelog](changelog.md)
 - [Contributing](contributing.md)
 - [License](license.md)

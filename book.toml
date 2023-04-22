@@ -1,6 +1,7 @@
 [book]
+title="Strapify Documentation"
+description="Documentation for the Strapify library"
 authors = ["Ray"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Strapify Docs"

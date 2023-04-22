@@ -6,9 +6,11 @@
 
 ### Quick Install (CDN)
 
+Paste the following code in the ```<head>``` of your HTML document.
+
 ```html
 <script
-	src="https://strapify-script.s3.amazonaws.com/strapify-v0.0.3.js"
+	src="https://strapify-script.s3.amazonaws.com/strapify-v1.0.6.js"
 	data-strapi-api-url="ENTER YOUR STRAPI URL HERE"
 	type="text/javascript"
 ></script>

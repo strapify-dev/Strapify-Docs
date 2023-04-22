@@ -22,7 +22,7 @@ Any.
 
 **Allows Multiple Arguments:** ✅ **YES**
 
-**Examples:**
+### Examples
 
 ```html
 <img strapi-into="alt_text -> alt">

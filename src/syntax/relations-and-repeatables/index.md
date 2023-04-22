@@ -1,1 +1,3 @@
 # Relation & Repeatable Elements
+
+Relation & repeatable elements are HTML elements that contain [template elements](../../syntax/template-elements/index.md). These elements correspond to a Strapi relation or repeatable field. These elements will contain all the populated template elements after Strapify executes. These elements are defined with the `strapi-relation` or `strapi-repeatable` attribute.

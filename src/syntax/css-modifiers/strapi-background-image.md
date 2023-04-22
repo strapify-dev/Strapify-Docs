@@ -18,13 +18,9 @@ Below is an HTML example of the `strapi-background-image` attribute being used t
 
 Any template element or child of a template element.
 
-**Related Attributes:**
-
-[strapi-field](strapi-field.md)
-
 **Allows Multiple Arguments:** ✅ **YES**
 
-**Examples:**
+### Examples
 
 ```html
 <div strapi-template strapi-background-image="portraitPhoto">

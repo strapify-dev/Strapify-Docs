@@ -25,7 +25,7 @@ Any element.
 
 **Allows Multiple Arguments:** 🚫 **NO**
 
-**Examples:**
+### Examples
 
 ```html
 <div strapi-template="">

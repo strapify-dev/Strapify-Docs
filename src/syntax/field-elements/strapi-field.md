@@ -44,7 +44,7 @@ Field elements must be a child of a [template element](syntax/template-elements/
 
 **Allows Multiple Arguments:** 🚫 **NO**
 
-**Examples:**
+### Examples
 
 ```html
 <p>Name: <span strapi-field="name">name</span></p>

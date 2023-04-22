@@ -15,3 +15,4 @@ Straight out of the box, Strapify provides the following functionality:
 
 The goal of the Strapify project is to enable the integration of a free open source CMS (Strapi) into an otherwise static website, without requiring additional code or otherwise complicating the development process. To this end, we seek compatibility and convenience for both manually built sites and those built with no-code website builders.
 
+Please note that Strapify is not affiliated with Strapi in any way.  Strapify is a separate open-source project that aims to make it easier to integrate Strapi into your website.
