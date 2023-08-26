@@ -5,3 +5,9 @@ authors = ["Ray"]
 language = "en"
 multilingual = false
 src = "src"
+[output.html]
+git-repository-url = "https://github.com/agoodman1999/strapify"
+git-repository-icon = "fa-github"
+preferred-dark-theme = "ayu"
+preferred-light-theme = "light"
+additional-css = ["src/custom.css"]
