@@ -2,7 +2,7 @@
 
 Contributions are always welcome, no matter how large or small.
 
-The GitHub repository for Strapify is located <a href="https://github.com/agoodman1999/strapify" target="_blank">here</a>
+The GitHub repository for Strapify is located <a href="https://github.com/strapify-dev/Strapify" target="_blank">here</a>
 
 If you would like to contribute to Strapify, please follow these steps:
 

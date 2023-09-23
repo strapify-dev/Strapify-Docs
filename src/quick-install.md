@@ -2,7 +2,7 @@
 
 ⬇️ [Download](https://strapify.s3.amazonaws.com/strapify-v0.0.6.js)
 
-📂 [Source Code](https://github.com/agoodman1999/strapify-v1.0.6.js)
+📂 [Source Code](https://github.com/strapify-dev/Strapify-v1.0.6.js)
 
 ### Quick Install (CDN)
 

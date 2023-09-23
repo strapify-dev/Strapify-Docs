@@ -6,7 +6,7 @@ language = "en"
 multilingual = false
 src = "src"
 [output.html]
-git-repository-url = "https://github.com/agoodman1999/strapify"
+git-repository-url = "https://github.com/strapify-dev/Strapify"
 git-repository-icon = "fa-github"
 preferred-dark-theme = "ayu"
 preferred-light-theme = "light"
