@@ -11,3 +11,5 @@ git-repository-icon = "fa-github"
 preferred-dark-theme = "ayu"
 preferred-light-theme = "light"
 additional-css = ["src/custom.css"]
+[build]
+build-dir = "website/docs"
