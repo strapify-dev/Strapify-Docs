@@ -1,7 +1,7 @@
 [book]
 title="Strapify Documentation"
 description="Documentation for the Strapify library"
-authors = ["Ray"]
+authors = ["Ray Keating", "Austin Gooodman"]
 language = "en"
 multilingual = false
 src = "src"
