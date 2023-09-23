@@ -1,3 +1,77 @@
+:root {
+    --dark: #1E1E1E;
+    --light: #FFFFFF;
+    --purple: #C792EA;
+    --orange: #FFB454;
+    --gray: #A3A3A3;
+    --heading-size-1: 3rem;
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: white;
+}
+
+.hero {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.hero h1 {
+    max-width: 680px;
+    text-align: center;
+}
+
+.purple {
+    color: var(--purple);
+}
+
+.orange {
+    color: var(--orange);
+}
+
 h1 {
-    color: red;
+    font-size: var(--heading-size-1);
+    margin-bottom: 0;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--gray);
+}
+
+.button {
+    background-color: var(--purple);
+    color: var(--light);
+    padding: 0.55rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+    text-shadow: 0 0 8px rgba(0,0,0,0.75);
+}
+
+.button:hover {
+    background-color: var(--orange);
+}
+
+a {
+    /* reset */
+    text-decoration: none;
+    color: inherit;
 }
