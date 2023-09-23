@@ -6,7 +6,7 @@ First, you'll need to include the Strapify script in your HTML document.  You ca
 
 ## Downloading the Script
 
-⬇️ [Download](https://strapify-script.s3.amazonaws.com/strapify.js)
+⬇️ [Download](https://strapify.s3.amazonaws.com/strapify-v0.0.6.js)
 
 ## Using the CDN
 
@@ -14,7 +14,7 @@ Paste the following code in the ```<head>``` of your HTML document.
 
 ```html
 <script
-    src="https://strapify-script.s3.amazonaws.com/strapify-v1.0.6.js"
+    src="https://strapify.s3.amazonaws.com/strapify-v0.0.6.js"
     data-strapi-api-url="ENTER YOUR STRAPI URL HERE"
     type="text/javascript"
 ></script>

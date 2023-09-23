@@ -12,7 +12,7 @@ Strapify is like Tailwind or Bootstrap for the Strapi CMS. It is a script that i
 
 The goal of the Strapify project is to enable the integration of a free open source CMS (Strapi) into an otherwise static website, without requiring additional code or otherwise complicating the development process. To this end, we seek compatibility and convenience for both manually built sites and those built with no-code website builders such as [Webflow](https://webflow.com/).
 
-⬇️ [Download](https://strapify-script.s3.amazonaws.com/strapify.js)
+⬇️ [Download](https://strapify.s3.amazonaws.com/strapify-v0.0.6.js)
 
 📂 Source Code (coming soon)
 
@@ -24,7 +24,7 @@ The goal of the Strapify project is to enable the integration of a free open sou
 
 ```html
 <script
-	src="https://strapify-script.s3.amazonaws.com/strapify-v0.0.3.js"
+	src="https://strapify.s3.amazonaws.com/strapify-v0.0.6.js"
 	data-strapi-api-url="ENTER YOUR STRAPI URL HERE"
 	type="text/javascript"
 ></script>
