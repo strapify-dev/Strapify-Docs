@@ -24,6 +24,10 @@ nav {
     color: white;
 }
 
+.nav .logo-img {
+    width: 200px;
+}
+
 .hero {
     height: 85vh;
     display: flex;
