@@ -5,6 +5,8 @@
     --orange: #FFB454;
     --green: #C3E886;
     --gray: #A3A3A3;
+    --blue: #88DDFF;
+    --red: #F07178;
     --heading-size-1: 3rem;
 }
 
@@ -56,6 +58,11 @@ h1 {
     color: var(--gray);
 }
 
+.hero .buttons {
+    display: flex;
+    gap: 12px;
+}
+
 .button {
     background-color: var(--purple);
     color: var(--light);
@@ -67,12 +74,12 @@ h1 {
     text-shadow: 0 0 8px rgba(0,0,0,0.75);
 }
 
-.button:hover {
-    background-color: var(--orange);
+.button:hover, .button.orange:hover {
+    background-color: var(--green);
 }
 
-.button.green {
-    background-color: var(--green);
+.button.orange {
+    background-color: var(--orange);
 }
 
 a {
