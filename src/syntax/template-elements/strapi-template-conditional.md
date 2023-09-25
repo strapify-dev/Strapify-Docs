@@ -30,29 +30,24 @@ Below is the HTML to specify two template elements, which have different styles 
 
     strapi-template-conditional="name == 'Paul Dirac'"
 
-> | The template element will be used in the case the the person’s name is Paul Dirac. |
-> | strapi-template-conditional | age < 90 | <div
+The template element will be used in the case the the person’s name is Paul Dirac.
 
     strapi-template-conditional="age < 90"
 
-> | The template element will be used in the case the the person is less than 90 years old. |
-> | strapi-template-conditional | is_employed == false | <div
+The template element will be used in the case the the person is less than 90 years old.
 
     strapi-template-conditional="is_employed == false"
 
-> | The template element will be used in the case the the person is not employed. |
-> | strapi-template-conditional | name == 'Paul Dirac' && age == 82 | <div
+The template element will be used in the case the the person is not employed.  strapi-template-conditional | name == 'Paul Dirac' && age == 82
 
     strapi-template-conditional="name == 'Paul Dirac' && age == 82"
 
-> | The template element will be used in the case the the person’s name is Paul Dirac and their age is 82. |
-> | strapi-template-conditional | (name == 'Paul Dirac' && age == 82) || is_employed == false | <div
+The template element will be used in the case the the person’s name is Paul Dirac and their age is 82.
 
     strapi-template-conditional="(name == 'Paul Dirac' && age == 82) || is_employed == false"
 
-> | The template element will be used in the case the the person’s name is Paul Dirac and their age is 82 or if they’re unemployed. |
-> | strapi-template-conditional | (name == 'Paul Dirac' && age == 82) || (is_employed == false && score == 3.0) | <div
+The template element will be used in the case the the person’s name is Paul Dirac and their age is 82 or if they’re unemployed.
 
     strapi-template-conditional="(name == 'Paul Dirac' && age == 82) || (is_employed == false && score == 3.0)"
 
-> | The template element will be used in the case the the person’s name is Paul Dirac and their age is 82 or if they’re unemployed and their score is 3. |
+The template element will be used in the case the the person’s name is Paul Dirac and their age is 82 or if they’re unemployed and their score is 3.
