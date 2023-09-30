@@ -149,6 +149,12 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="strapi-logout-redirect"><a class="header" href="#strapi-logout-redirect">strapi-logout-redirect</a></h1>
+<blockquote>
+<p>Please Note - The auth system stores the user's JWT in local storage.  This is not secure and should not be used for sensitive data.  Soon, the auth system will be updated to use secure cookies instead of local storage, but for now, please do not use the auth system for sensitive data.</p>
+</blockquote>
+<blockquote>
+<p>When working with sensitive data or on projects that require any level of complexity beyond showing/hiding collections, the Strapify auth system is not recommended.</p>
+</blockquote>
 <p>The <code>strapi-logout-redirect</code> attribute can be used on a <code>strapi-logout</code> element to redirect a user to a different URL when the element is clicked. This is useful for logging out a user and redirecting them to a different page.</p>
 <h3 id="example"><a class="header" href="#example">Example</a></h3>
 <pre><code class="language-html">&lt;button strapi-logout strapi-logout-redirect=&quot;/home&quot;&gt;Logout&lt;/button&gt;

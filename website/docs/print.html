@@ -987,7 +987,13 @@
 
 </code></pre>
 <p>Sets the background image of the div to the value in the strapi field &quot;portraitPhoto&quot;.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="auth-system"><a class="header" href="#auth-system">Auth System</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="auth-system-alpha"><a class="header" href="#auth-system-alpha">Auth System (Alpha)</a></h1>
+<blockquote>
+<p>Please Note - When working with sensitive data or on projects that require any level of complexity beyond showing/hiding collections, the Strapify auth system is not recommended.</p>
+</blockquote>
+<blockquote>
+<p>The auth system stores the user's JWT in local storage.  This is not secure and should not be used for sensitive data.</p>
+</blockquote>
 <p>Strapify provides a basic authentication system that can be used to authenticate users and register new users.  It is intended for use on simple projects and it’s primary use is to show or hide Strapi collections depending on whether the user is logged in.  When working with sensitive data or on projects that require any level of complexity beyond showing/hiding collections, the Strapify auth system is not recommended.</p>
 <p>The basic authentication system for Strapify consists of three parts:</p>
 <ol>
@@ -996,10 +1002,13 @@
 <li>The <a href="syntax/auth-system/strapi-auth-submit.html">strapi-auth-submit</a> attribute, which submits the form when clicked.</li>
 </ol>
 <p>The Strapify auth system is intended for use on simple projects and it’s primary use is to show or hide Strapi collections depending on whether the user is logged in.</p>
-<blockquote>
-<p>Please Note - When working with sensitive data or on projects that require any level of complexity beyond showing/hiding collections, the Strapify auth system is not recommended.</p>
-</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-auth"><a class="header" href="#strapi-auth">strapi-auth</a></h1>
+<blockquote>
+<p>Please Note - The auth system stores the user's JWT in local storage.  This is not secure and should not be used for sensitive data.  Soon, the auth system will be updated to use secure cookies instead of local storage, but for now, please do not use the auth system for sensitive data.</p>
+</blockquote>
+<blockquote>
+<p>When working with sensitive data or on projects that require any level of complexity beyond showing/hiding collections, the Strapify auth system is not recommended.</p>
+</blockquote>
 <p><code>strapi-auth</code> is the first attribute that should be added to a login or register form when configuring the Strapify authentication system.</p>
 <p>The basic authentication system for Strapify consists of three parts:</p>
 <ol>
@@ -1079,6 +1088,12 @@
 </code></pre>
 <p>Marks the form element as a form that should register users using the Strapify authentication system</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-auth-input"><a class="header" href="#strapi-auth-input">strapi-auth-input</a></h1>
+<blockquote>
+<p>Please Note - The auth system stores the user's JWT in local storage.  This is not secure and should not be used for sensitive data.  Soon, the auth system will be updated to use secure cookies instead of local storage, but for now, please do not use the auth system for sensitive data.</p>
+</blockquote>
+<blockquote>
+<p>When working with sensitive data or on projects that require any level of complexity beyond showing/hiding collections, the Strapify auth system is not recommended.</p>
+</blockquote>
 <p><code>strapi-auth-input</code> is used inside a form where the <code>strapi-auth</code> attribute is being used. The <code>strapi-auth-input</code> attribute is used to specify the Strapi user field that the input element is associated with. The attribute value should match the field name in the Strapi user model. For example, in a registration form, the input element for the username field would have <code>strapi-auth-input=&quot;username&quot;</code>, and the input element for the email field would have <code>strapi-auth-input=&quot;email&quot;</code>.</p>
 <p>When used in a login form, the <code>strapi-auth-input</code> attribute should be set to &quot;identifier&quot; to specify the username field.</p>
 <hr />
@@ -1121,6 +1136,12 @@
 </code></pre>
 <p>Another username input, however this would be used for registration to set the new user’s username and email to the value entered in the username input.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-auth-submit"><a class="header" href="#strapi-auth-submit">strapi-auth-submit</a></h1>
+<blockquote>
+<p>Please Note - The auth system stores the user's JWT in local storage.  This is not secure and should not be used for sensitive data.  Soon, the auth system will be updated to use secure cookies instead of local storage, but for now, please do not use the auth system for sensitive data.</p>
+</blockquote>
+<blockquote>
+<p>When working with sensitive data or on projects that require any level of complexity beyond showing/hiding collections, the Strapify auth system is not recommended.</p>
+</blockquote>
 <p>The <code>strapi-auth-submit</code>attribute should be used in <code>strapi-auth</code> forms to indicate the submit button. When clicked, it triggers the authentication process (either registration or login). The attribute is typically added to a <code>&lt;button&gt;</code> element of type &quot;submit&quot;.</p>
 <p>If <code>strapi-auth</code> is set to <code>register</code>, the form will attempt to create a new user from the credentials provided in the form inputs using <code>strapi-auth-input</code>.</p>
 <p>If <code>strapi-auth</code> is set to <code>authenticate</code>, it will attempt to authenticate the user based on the credentials provided in the login form, and the user’s JWT token will be stored in localStorage.</p>
@@ -1131,6 +1152,12 @@
 <p><strong>Examples:</strong></p>
 <p>See code example in <a href="syntax/auth-system/strapi-auth.html">strapi-auth</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-logout"><a class="header" href="#strapi-logout">strapi-logout</a></h1>
+<blockquote>
+<p>Please Note - The auth system stores the user's JWT in local storage.  This is not secure and should not be used for sensitive data.  Soon, the auth system will be updated to use secure cookies instead of local storage, but for now, please do not use the auth system for sensitive data.</p>
+</blockquote>
+<blockquote>
+<p>When working with sensitive data or on projects that require any level of complexity beyond showing/hiding collections, the Strapify auth system is not recommended.</p>
+</blockquote>
 <p>When set on a <code>&lt;button&gt;</code> element, the <code>strapi-logout</code> attribute will log out the user when the button is clicked. It can be used together with <code>strapi-logout-redirect</code> to destroy the token and redirect the user to another page.</p>
 <h3 id="example-2"><a class="header" href="#example-2">Example</a></h3>
 <pre><code class="language-html">&lt;button strapi-logout&gt;Logout&lt;/button&gt;
@@ -1140,18 +1167,36 @@
 </code></pre>
 <p>Log out the user and redirect them to the <code>/home</code> page.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-logout-redirect"><a class="header" href="#strapi-logout-redirect">strapi-logout-redirect</a></h1>
+<blockquote>
+<p>Please Note - The auth system stores the user's JWT in local storage.  This is not secure and should not be used for sensitive data.  Soon, the auth system will be updated to use secure cookies instead of local storage, but for now, please do not use the auth system for sensitive data.</p>
+</blockquote>
+<blockquote>
+<p>When working with sensitive data or on projects that require any level of complexity beyond showing/hiding collections, the Strapify auth system is not recommended.</p>
+</blockquote>
 <p>The <code>strapi-logout-redirect</code> attribute can be used on a <code>strapi-logout</code> element to redirect a user to a different URL when the element is clicked. This is useful for logging out a user and redirecting them to a different page.</p>
 <h3 id="example-3"><a class="header" href="#example-3">Example</a></h3>
 <pre><code class="language-html">&lt;button strapi-logout strapi-logout-redirect=&quot;/home&quot;&gt;Logout&lt;/button&gt;
 </code></pre>
 <p>Log out the user and redirect them to the <code>/home</code> page.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-error-redirect"><a class="header" href="#strapi-error-redirect">strapi-error-redirect</a></h1>
+<blockquote>
+<p>Please Note - The auth system stores the user's JWT in local storage.  This is not secure and should not be used for sensitive data.  Soon, the auth system will be updated to use secure cookies instead of local storage, but for now, please do not use the auth system for sensitive data.</p>
+</blockquote>
+<blockquote>
+<p>When working with sensitive data or on projects that require any level of complexity beyond showing/hiding collections, the Strapify auth system is not recommended.</p>
+</blockquote>
 <p>The <code>strapi-error-redirect</code> attribute redirects a user to a different URL when a <code>strapi-ezforms-form</code> or <code>strapi-auth</code> form fails to submit. It should be added on the <code>&lt;form&gt;</code> component itself.</p>
 <h3 id="example-4"><a class="header" href="#example-4">Example</a></h3>
 <pre><code class="language-html">&lt;form strapi-ezforms-form strapi-error-redirect=&quot;/error&quot;&gt;
 </code></pre>
 <p>Redirects the user to the error page when the form submission is unsuccessful</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="strapi-success-redirect"><a class="header" href="#strapi-success-redirect">strapi-success-redirect</a></h1>
+<blockquote>
+<p>Please Note - The auth system stores the user's JWT in local storage.  This is not secure and should not be used for sensitive data.  Soon, the auth system will be updated to use secure cookies instead of local storage, but for now, please do not use the auth system for sensitive data.</p>
+</blockquote>
+<blockquote>
+<p>When working with sensitive data or on projects that require any level of complexity beyond showing/hiding collections, the Strapify auth system is not recommended.</p>
+</blockquote>
 <p>The <code>strapi-success-redirect</code> attribute redirects a user to a different URL when a <code>strapi-ezforms-form</code> or <code>strapi-auth</code> form is successfully submitted. It should be added on the <code>&lt;form&gt;</code> component itself.</p>
 <h3 id="example-5"><a class="header" href="#example-5">Example</a></h3>
 <pre><code class="language-html">&lt;form strapi-ezforms-form strapi-success-redirect=&quot;/success&quot;&gt;
