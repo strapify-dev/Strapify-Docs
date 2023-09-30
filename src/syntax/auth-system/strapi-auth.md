@@ -12,8 +12,6 @@ The basic authentication system for Strapify consists of three parts:
 
 The Strapify auth system is intended for use on simple projects and it’s primary use is to show or hide Strapi collections depending on whether the user is logged in.
 
-> Please Note - When working with sensitive data or on projects that require any level of complexity beyond showing/hiding collections, the Strapify auth system is not recommended.
-
 Example of a login form:
 
 ```html
